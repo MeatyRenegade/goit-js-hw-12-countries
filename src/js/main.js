@@ -1,7 +1,7 @@
 import refs from './refs.js';
 import notify from './notify.js';
-import fetchCountries from './fetchCountries.js';
-import markupRender from './markupRender.js';
+import fetchCountries from './fetch-countries.js';
+import markupRender from './markup-render.js';
 
 const debounce = require('lodash.debounce');
 
