@@ -7,7 +7,7 @@ const applyTemplate = function (template, content) {
   return template(content);
 };
 
-function makeMarkup(data = []) {
+function markupRender(data = []) {
   const countCountries = data.length;
   let markupHTML = '';
 
@@ -25,4 +25,4 @@ function makeMarkup(data = []) {
   refs.container.innerHTML = markupHTML;
 }
 
-export default makeMarkup;
+export default markupRender;

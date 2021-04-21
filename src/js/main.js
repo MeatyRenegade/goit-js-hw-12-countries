@@ -1,16 +1,18 @@
 import refs from './refs.js';
 import notify from './notify.js';
 import fetchCountries from './fetchCountries.js';
-import markup from './markup-render.js';
+import markupRender from './markupRender.js';
 
 const debounce = require('lodash.debounce');
 
-function searchHandler(event) {
+function searchHandler() {
   const searchQuery = this.value.trim();
-  markup();
+
+  markupRender();
+
   if (searchQuery !== '') {
     fetchCountries(searchQuery)
-      .then(data => markup(data))
+      .then(data => markupRender(data))
       .catch(message => notify(message));
   }
 }
